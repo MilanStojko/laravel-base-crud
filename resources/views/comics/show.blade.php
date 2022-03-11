@@ -1,6 +1,6 @@
 @extends('layouts.base')
 
-@section('title', 'prodotto')
+@section('title')
 
 @section('content')
     <h1>{{ $comic->title }}</h1>

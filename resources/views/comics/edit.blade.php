@@ -1,6 +1,6 @@
 @extends('layouts.base')
 
-@section('title', 'lista prodotti')
+@section('title')
 
 @section('content')
 
@@ -9,10 +9,11 @@
     <form action="{{ route('comics.update', $comic->id) }}" method="POST">
 
         @csrf
+        @method('PUT')
 
         <div class="form-group">
             <label for="title">Titolo</label>
-            <input type="text" class="form-control" id="name" name="name" placeholder="Inserisci il nome del fumetto"
+            <input type="text" class="form-control" id="title" name="title" placeholder="Inserisci il nome del fumetto"
                 value={{ $comic->title }}>
         </div>
         <div class="form-group">
@@ -22,27 +23,27 @@
         </div>
         <div class="form-group">
             <label for="thumb">Immagine</label>
-            <input type="text" class="form-control" id="cooking_time" name="cooking_time" placeholder="Inserisci"
+            <input type="text" class="form-control" id="thumb" name="thumb" placeholder="Inserisci"
                 value={{ $comic->thumb }}>
         </div>
         <div class="form-group">
             <label for="price">Prezzo</label>
-            <input type="number" class="form-control" id="weight" name="weight" placeholder="Inserisci"
+            <input type="number" class="form-control" id="price" name="price" placeholder="Inserisci"
                 value={{ $comic->price }}>
         </div>
         <div class="form-group">
             <label for="series">Serie</label>
-            <input type="number" class="form-control" id="weight" name="weight" placeholder="Inserisci"
+            <input type="number" class="form-control" id="series" name="series" placeholder="Inserisci"
                 value={{ $comic->series }}>
         </div>
         <div class="form-group">
             <label for="sale_date">Anno</label>
-            <input type="text" class="form-control" id="image" name="image" placeholder="Inserisci"
+            <input type="text" class="form-control" id="sale_date" name="sale_date" placeholder="Inserisci"
                 value={{ $comic->sale_date }}>
         </div>
         <div class="form-group">
             <label for="type">Genere</label>
-            <input type="text" class="form-control" id="image" name="image" placeholder="Inserisci"
+            <input type="text" class="form-control" id="type" name="type" placeholder="Inserisci"
                 value={{ $comic->type }}>
         </div>
         <button type="submit" class="btn btn-primary">Aggiorna</button>

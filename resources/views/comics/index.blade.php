@@ -1,6 +1,6 @@
 @extends('layouts.base')
 
-@section('title', 'lista prodotti')
+@section('title')
 
 @section('content')
     <a href="{{ route('comics.create') }}"><button type="button" class="btn btn-success">aggiungi</button></a>
